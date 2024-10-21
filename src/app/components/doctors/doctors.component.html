@@ -1,0 +1,69 @@
+<table
+  tuiTable
+  size="m"
+  [style.width.%]="100"
+  class="table"
+>
+  <thead>
+  <tr>
+    <th tuiTh>Пользователь</th>
+    <th tuiTh>Имя</th>
+    <th tuiTh>Фамилия</th>
+    <th tuiTh>Отчество</th>
+    <th tuiTh>Почта</th>
+    <th tuiTh>Телефон</th>
+    <th tuiTh>Действия</th>
+  </tr>
+  </thead>
+  <tbody tuiTbody>
+  <tr *ngFor="let item of data">
+    <td tuiTd>
+      <div tuiCell="m">
+        <tui-avatar
+          [src]="item.username | tuiInitials"
+          [style.background]="item.username | tuiAutoColor"
+        />
+        <span tuiTitle>{{ item.username }}</span>
+      </div>
+    </td>
+    <td tuiTd>
+      <span>{{ item.name }}</span>
+    </td>
+    <td tuiTd>
+      <span>{{ item.surname }}</span>
+    </td>
+    <td tuiTd>
+      <span>{{ item.patronymic }}</span>
+    </td>
+    <td tuiTd>
+      <span>{{ item.email }}</span>
+    </td>
+    <td tuiTd>
+      <span>{{ item.phone }}</span>
+    </td>
+
+    <td tuiTd>
+                <span tuiStatus>
+                    <button
+                      appearance="link"
+                      iconStart="@tui.milestone"
+                      size="xs"
+                      tuiIconButton
+                      type="button"
+                    >
+                        Edit
+                    </button>
+                    <button
+                      appearance="link"
+                      iconStart="@tui.ellipsis"
+                      size="xs"
+                      tuiIconButton
+                      type="button"
+                    >
+                        More
+                    </button>
+                </span>
+    </td>
+  </tr>
+  </tbody>
+</table>

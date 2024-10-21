@@ -1,0 +1,42 @@
+<div class="main">
+  <div
+    tuiAppearance="floating"
+    tuiCardLarge="compact"
+    class="card"
+  >
+    <header tuiHeader>
+      <h2 tuiTitle>
+        Войти в аккаунт
+        <span tuiSubtitle>Для продолжение работы войдите в аккаунт</span>
+      </h2>
+    </header>
+
+    <div class="login-fields">
+      <tui-textfield>
+        <label tuiLabel>Введиите логин</label>
+        <input
+          placeholder="Логин"
+          tuiTextfield
+          [(ngModel)]="username"
+        />
+        <tui-icon
+          icon="@tui.copy"
+          tuiCopy
+        />
+      </tui-textfield>
+
+      <tui-textfield>
+        <label tuiLabel>Введите пароль</label>
+        <input
+          placeholder="Пароль"
+          tuiTextfield
+          type="password"
+          [(ngModel)]="password"
+        />
+        <tui-icon tuiPassword/>
+      </tui-textfield>
+
+      <button tuiButton (click)="login()">Авторизоваться</button>
+    </div>
+  </div>
+</div>

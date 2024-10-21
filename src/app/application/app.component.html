@@ -1,0 +1,52 @@
+<tui-root>
+  <div class="title">
+    <h2 tuiTitle="l">
+      Healthy Smile
+      <div tuiSubtitle>Менеджмент здоровья
+      </div>
+    </h2>
+    <div
+      tuiComment="left"
+      class="primary"
+    >
+      Админ панель
+    </div>
+  </div>
+
+  <tui-tabs class="tabs">
+    <button
+      iconStart="@tui.user"
+      tuiTab
+      routerLink="users"
+      type="button"
+    >
+      Пользователи
+    </button>
+    <button
+      iconStart="@tui.ambulance"
+      tuiTab
+      routerLink="doctors"
+      type="button"
+    >
+      Врачи
+    </button>
+    <button
+      iconStart="@tui.milestone"
+      tuiTab
+      routerLink="appointments"
+      type="button"
+    >
+      Записи
+    </button>
+    <button
+      iconStart="@tui.monitor-cog"
+      tuiTab
+      type="button"
+    >
+      Система
+    </button>
+  </tui-tabs>
+
+  <router-outlet class="router"/>
+
+</tui-root>

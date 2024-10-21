@@ -1,0 +1,12 @@
+.table {
+  width: 100%;
+}
+
+.table *{
+  border: none;
+}
+
+
+.field {
+  margin-top: 2rem;
+}
